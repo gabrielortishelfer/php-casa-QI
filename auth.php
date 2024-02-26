@@ -16,14 +16,14 @@ function accessVerify(string $email, string $password): void
 {
     $db = [
         [
-            'name' => 'Eduardo Maciel',
-            'email' => 'edmaciel.03@gmail.com',
+            'name' => 'João Paulo',
+            'email' => 'joao.paulo@email.com.br',
             'password' => '$2y$10$en/56G8BANT2AzXX29eee.WS46yfzBxIMlTPgmIMqLcBEcZcdq8pO',
             'gender' => 'M'
         ],
         [
-            'name' => 'Raian Rodrigues Guimaraes',
-            'email' => 'raian.guimaraes@hotmail.com',
+            'name' => 'Maria Aparecida',
+            'email' => 'maria.paulo@email.com',
             'password' => '$2y$10$x/fRf9UQ79STLLCJGLxkPOVI7sfPtdGtSBjqXox2RFwxr11RQtTu6',
             'gender' => 'F'
         ]
