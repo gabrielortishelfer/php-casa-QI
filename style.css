@@ -1,3 +1,60 @@
-body{
-    border-radius: 0.6rem;  
+/* Estilo do fundo da página*/
+body {
+    font-family: Arial, sans-serif;
+    background: #030118;  /* fallback for old browsers */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Estilo do formulário */
+form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px; /* Limitando a largura do formulário */
+    width: 100%; /* Garantindo responsividade */
+}
+
+/* Estilo do Título da Empresa*/
+h3 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    text-align: center; /* Centralizando o texto */
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+}
+
+/* Estilo do botão*/
+button {
+    font-weight:bold;
+    color:white;
+    background-color: #ffd00f;
+    background-image: linear-gradient(180deg, #ffd00f 0%, #ffae00 100%);
+    
+    padding: 15px 15px; /* Aumentando o padding vertical */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block; /* Garantindo que o botão ocupe a largura total */
+    width: 100%;
+}
+
+/* Mensagem de erro */
+p {
+    color: red;
+    margin-top: 10px;
 }

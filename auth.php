@@ -1,14 +1,18 @@
 <?php
-if (empty($_POST))
-    throw new InvalidArgumentException("Requisição inválida!!!");
+session_start();
+
+if (empty($_POST['user_email']) || empty($_POST['user_password'])) {
+    $_SESSION['msg_login_error'] = 'Requisição inválida!!!';
+    header('location:index.php');
+    exit;
+}
 
 $email = $_POST['user_email'];
 $password = $_POST['user_password'];
 
-session_start();
-accessVerify(email: $email, password: $password);
+accessVerify($email, $password);
 
-function accessVerify(string $password, string $email): void
+function accessVerify(string $email, string $password): void
 {
     $db = [
         [
@@ -32,10 +36,12 @@ function accessVerify(string $password, string $email): void
         ) {
             $_SESSION['user_name'] = $register['name'];
             $_SESSION['user_gender'] = $register['gender'];
-            header('location:dashboard.php'); // Redirect
+            header('location:dashboard.php'); // Redirecionar
             exit;
         }
     }
+
     $_SESSION['msg_login_error'] = 'Lamento, usuário ou senha inválidos!!!';
     header('location:index.php');
+    exit;
 }
