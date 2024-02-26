@@ -1,4 +1,10 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
+
+
 <html lang="pt-BR">
 
 <head>
@@ -16,7 +22,7 @@
         <button type="submit">Autenticar</button>
     </form>
     <?php
-    session_start();
+    
     if (!empty($_SESSION['msg_login_error'])) :
     ?>
         <p><?= $_SESSION['msg_login_error'] ?></p>
