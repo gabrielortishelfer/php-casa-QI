@@ -8,7 +8,8 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <style>
         button {
-            margin-bottom: 10px; /* Adicione o espaçamento desejado entre os botões */
+            margin-bottom: 10px;
+            /* Adicione o espaçamento desejado entre os botões */
         }
 
 
@@ -21,17 +22,14 @@
 
 <body>
     <header>
-        <!-- Formulário de login -->
-        <form action="auth.php" method="post">
-            <h3> Storage </h3>
-            <p>Camiseta: R$30,00       QTD:10  </p>
-            <p>Ventilador: R$ 160,00      QTD:20 </p>
-            <p>Monitor: R$ 300,00       QTD:15 </p>
-            <p>Teclado: R$: 130       QTD:10 </p>
 
-           <!-- <a href="storage.php"><button type="button">Full View</button></a> -->
-           <a href={{route('dashboard')}}><button type="button">Full view</button></a>
-        </form>
+        <h3> Storage </h3>
+        @foreach ($products->all() as $product)
+            <p>{{ $product->name }}: R${{ $product->price }} / Descrição: {{ $product->description }}</p>
+        @endforeach
+        <!-- <a href="storage.php"><button type="button">Full View</button></a> -->
+        <a href={{ route('dashboard') }}><button type="button">Full view</button></a>
+
 
     </header>
 </body>

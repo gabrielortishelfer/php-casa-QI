@@ -22,19 +22,20 @@
 <body>
     <header>
         <!-- Formulário de login -->
-        <form action="auth.php" method="post">
-            <h3> NEW PRODUCT </h3>
-            <label for="xxxxxxx">Name </label>
-            <input type="email" name="xxxxxxx" id="xxxxxxx" required>
+        <h3> NEW PRODUCT </h3>
+        <form action="{{route('store')}}" method="post">
+            @csrf
+            <label for="name">Name </label>
+            <input type="text" name="name" id="name" required>
 
-            <label for="xxxxxxx">Price (R$)</label>
-            <input type="email" name="xxxxxxx" id="xxxxxxx" required>
+            <label for="price">Price (R$)</label>
+            <input type="number" name="price" id="price" required>
 
-            <label for="xxxxxxx">Description </label>
-            <input type="email" name="xxxxxxx" id="xxxxxxx" required>
+            <label for="description">Description </label>
+            <input type="text" name="description" id="description" required>
 
            <!-- <a href="newProduct.php"><button type="button">Add</button></a> -->
-           <a href={{route('dashboard')}}><button type="button">Add</button></a>
+           <button type="submit">Add</button>
         </form>
 
     </header>
