@@ -27,6 +27,14 @@ Route::get('/storage', [ProductController::class, 'storage'])->name('storage');
 
 Route::post('/store', [ProductController::class, 'store'])->name('store');
 
+Route::get('/delete/{id}', [ProductController::class, 'destroy'])->name('delete');
+
+Route::get('/edit/{id}', [ProductController::class, 'edit'])->name('edit');
+
+Route::put('/update/{id}', [ProductController::class, 'update'])->name('update');
+
+Route::get('/update/{id}', [ProductController::class, 'update'])->name('update');
+
 
 
 

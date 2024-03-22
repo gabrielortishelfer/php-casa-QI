@@ -25,7 +25,7 @@
 
         <h3> Storage </h3>
         @foreach ($products->all() as $product)
-            <p>{{ $product->name }}: R${{ $product->price }} / Descrição: {{ $product->description }}</p>
+            <p>{{ $product->name }}: R${{ $product->price }} / Descrição: {{ $product->description }} <a href="{{route('edit',$product->id)}}">Editar</a> / <a href="{{route('delete',$product->id)}}">Deletar</a></p>
         @endforeach
         <!-- <a href="storage.php"><button type="button">Full View</button></a> -->
         <a href={{ route('dashboard') }}><button type="button">Full view</button></a>
